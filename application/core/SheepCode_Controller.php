@@ -14,7 +14,11 @@ class SheepCode_Controller extends CI_Controller
 		$this->load->view('_master/_footer',$data);
   }
 
-  
+  public function render_one($view_name,$data=NULL){
+    $this->load->view($view_name,$data);
+  }
+
+
 
 
 
