@@ -167,10 +167,10 @@
           </li>
 
           <li>
-            <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
+            <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">จัดการกลุ่มลูกค้า</span><span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-              <li><a href="signin.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signin</a></li>
-              <li><a href="signup.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>
+              <li><a href="<?php echo base_url() . 'cus-group' ?>" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>ค้นหาและจัดการ</a></li>
+              <li><a href="<?php echo base_url() . 'cus-group/create_form' ?>"><i class="fa fa-sign-in nav_icon"></i>สร้างกลุ่มลูกค้า</a></li>
             </ul>
           </li>
         </ul>
