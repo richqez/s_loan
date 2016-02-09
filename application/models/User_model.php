@@ -7,6 +7,7 @@ class User_model extends CI_Model
 {
 
   //public $user_id;
+
   public $user_username;
   public $user_password;
   public $user_role;

@@ -14,6 +14,7 @@ class Auth extends SheepCode_Controller
 
     $this->load->model('User_model');
 
+
   }
 
 
