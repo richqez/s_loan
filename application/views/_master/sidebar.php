@@ -173,6 +173,13 @@
               <li><a href="<?php echo base_url() . 'cus-group/create_form' ?>"><i class="fa fa-sign-in nav_icon"></i>สร้างกลุ่มลูกค้า</a></li>
             </ul>
           </li>
+          <li>
+            <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">จัดการลูกค้า</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              <li><a href="<?php echo base_url() . 'cus/read_form' ?>" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>ค้นหาและจัดการ</a></li>
+              <li><a href="<?php echo base_url() . 'cus/create_form' ?>"><i class="fa fa-sign-in nav_icon"></i>สร้างข้อมูลลูกค้า</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
