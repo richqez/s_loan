@@ -18,6 +18,10 @@ class SheepCode_Controller extends CI_Controller
     $this->load->view($view_name,$data);
   }
 
+  public function render_json($data){
+    header('Content-type: application/json;charset=utf-8');
+    echo json_encode($data,JSON_UNESCAPED_UNICODE);
+  }
 
 
 
