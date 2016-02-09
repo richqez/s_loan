@@ -54,7 +54,12 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
+
 $route['cus-group'] = 'CustomerGroup/read_form';
 $route['cus-group/datatable'] = 'CustomerGroup/datatable';
+
 $route['cus-group/create_form'] = 'CustomerGroup/create_form';
 $route['cus-group/create'] = 'CustomerGroup/create';
+
+$route['cus/create_form'] = 'Customer/create_form';
+$route['cus/create'] = 'Customer/create';
