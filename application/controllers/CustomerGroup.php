@@ -10,6 +10,16 @@ class CustomerGroup extends SheepCode_Controller
   {
     parent::__construct();
   }
+
+  function create_form(){
+    $this->render('customer_group/create_form');
+  }
+
+  
+
+
+
+
 }
 
 
