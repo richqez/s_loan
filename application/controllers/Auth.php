@@ -20,9 +20,9 @@ class Auth extends SheepCode_Controller
   /**
    * Load view login page
    */
-  public function index(){
+  public function index($data=NULL){
 
-    $this->render_one('login');
+    $this->render_one('login',$data);
   }
 
 
@@ -35,18 +35,16 @@ class Auth extends SheepCode_Controller
 
 
     if (!$result['user_username']) {
-      $data['err_message'] = "ไม่พบข้อมูลชื่อผู้ใช้";
+      $this->session->set_flashdata("login_error","ไม่พบข้อมูลชื่อผู้ใช้");
     }elseif ($result['user_username'] && !$result['user_password']) {
-      $data['err_message'] = "ชื่อผู้ใช้กับรหัสผ่านไม่ตรงกัน";
+      $this->session->set_flashdata("login_error","ชื่อผู้ใช้กับรหัสผ่านไม่ตรงกัน");
     }elseif ($result['user_username'] && $result['user_password']) {
-      $data['err_message'] = "ผ่านละ";
+      $this->session->set_flashdata("login_error","ผ่านละ");
     }
 
-      $this->render_one('login',$data);
-
+    redirect('/auth','refresh');
 
    }
-
 
 
    public function create_user(){

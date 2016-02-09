@@ -18,11 +18,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="login">
 		<h1><a href="index.html">D Loan Systems </a></h1>
 		<div class="login-bottom">
-			<?php if (isset($err_message)): ?>
-				<div class="well">
-					<h3>ข้อความแจ้งเตือน</h3>
+			<?php if ($this->session->flashdata("login_error")!==NULL): ?>
+				<div class="well" style="background:#d95459;color:white">
+					<b><h4>ข้อความแจ้งเตือน</h4></b>
+					<br>
 					<p>
-						<?php echo $err_message; ?>
+						<?php echo $this->session->flashdata("login_error"); ?>
 					</p>
 				</div>
 			<?php endif; ?>
