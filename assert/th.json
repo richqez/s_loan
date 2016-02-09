@@ -1,0 +1,27 @@
+
+
+
+{
+    "decimal":        "",
+    "emptyTable":     "ไม่พบข้อมูล",
+    "info":           "แสดงข้อมูล _START_ ถึง _END_ of _TOTAL_ รายการ",
+    "infoEmpty":      "แสดง 0 ถึง 0 จาก 0 รายการ",
+    "infoFiltered":   "(กรองข้อมูล จาก _MAX_ ทั้งหมดรายการ)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "แสดง _MENU_ รายการ",
+    "loadingRecords": "โหลดข้อมูล...",
+    "processing":     "กำลังทำงาน...",
+    "search":         "ค้นหา:",
+    "zeroRecords":    "ไม่พบข้อมูลที่ตรงกัน",
+    "paginate": {
+        "first":      "แรกสุด",
+        "last":       "ท้ายสุด",
+        "next":       "ถัดไป",
+        "previous":   "ก่อนหน้า"
+    },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+}
