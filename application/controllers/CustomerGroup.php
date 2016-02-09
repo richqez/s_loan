@@ -35,6 +35,11 @@ class CustomerGroup extends SheepCode_Controller
 
   public function datatable(){
     $result_set = $this->CustomerGroup_model->find_all();
+    foreach ($result_set as $key => $value) {
+      $dt = new DateTime($value->created_at);
+      $dt = $dt->format('Y-m-d');
+      $result_set[$key]->created_at = formatDateToShow($dt);
+    }
     $this->render_json(['data'=>$result_set]);
   }
 
