@@ -13,7 +13,7 @@
   <div class="grid-form">
     <div class="grid-form1">
       <h3 id="forms-example" class="">สร้างข้อมูลลูกค้า</h3>
-      <form class="form-horizontal">
+      <form class="form-horizontal" action="<?php echo base_url() . 'cus/create' ?>" method="post">
         <div class="form-group">
           <label for="inputEmail3" class="col-sm-2 control-label hor-form">ชื่อ</label>
           <div class="col-sm-8">
