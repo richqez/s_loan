@@ -14,6 +14,8 @@ class SheepCode_Controller extends CI_Controller
 		$this->load->view('_master/_footer',$data);
   }
 
+  
+
 
 
 
