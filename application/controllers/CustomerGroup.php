@@ -13,11 +13,11 @@ class CustomerGroup extends SheepCode_Controller
   }
 
   public function create_form(){
-    $this->render('customer_group/create_form');
+    $this->render('customer_group/create_form',['title_page'=>'สร้าง กลุ่มลูกค้า']);
   }
 
   public function read_form(){
-    $this->render('customer_group/read_form');
+    $this->render('customer_group/read_form',['title_page'=>'จัดการ กลุ่มลูกค้า']);
   }
 
 
@@ -34,12 +34,15 @@ class CustomerGroup extends SheepCode_Controller
   }
 
   public function datatable(){
+
     $result_set = $this->CustomerGroup_model->find_all();
+
     foreach ($result_set as $key => $value) {
       $dt = new DateTime($value->created_at);
       $dt = $dt->format('Y-m-d');
       $result_set[$key]->created_at = formatDateToShow($dt);
     }
+
     $this->render_json(['data'=>$result_set]);
   }
 
