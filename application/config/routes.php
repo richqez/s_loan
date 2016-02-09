@@ -63,3 +63,5 @@ $route['cus-group/create'] = 'CustomerGroup/create';
 
 $route['cus/create_form'] = 'Customer/create_form';
 $route['cus/create'] = 'Customer/create';
+$route['cus/read_form'] = 'Customer/read_form';
+$route['cus/datatable'] = 'Customer/datatable';

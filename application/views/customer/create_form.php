@@ -13,6 +13,16 @@
   <div class="grid-form">
     <div class="grid-form1">
       <h3 id="forms-example" class="">สร้างข้อมูลลูกค้า</h3>
+      <?php if ($this->session->flashdata("result_message")!==NULL): ?>
+        <div class="alert alert-success">
+              <strong> <?php echo $this->session->flashdata("result_message") ?> !</strong>
+          </div>
+      <?php endif; ?>
+      <?php if ($this->session->flashdata("result_message-error")!==NULL): ?>
+        <div class="alert alert-danger" role="alert">
+          <strong> <?php echo $this->session->flashdata("result_message-error") ?> !</strong>
+        </div>
+      <?php endif; ?>
       <form class="form-horizontal" action="<?php echo base_url() . 'cus/create' ?>" method="post">
         <div class="form-group">
           <label for="inputEmail3" class="col-sm-2 control-label hor-form">ชื่อ</label>
@@ -44,10 +54,15 @@
             <input type="text" class="form-control" id="inputPassword3" name="customer_tel" placeholder="เบอร์โทรศัพท์">
           </div>
         </div>
-        <div class="form-group">
+         <div class="form-group">
           <label for="inputPassword3" class="col-sm-2 control-label hor-form">สถานะ</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="inputPassword3" name="customer_group_id" placeholder="สถานะ">
+            <select class="form-control" name="customer_group_id" id="customer_group_id">
+                  <option value="null" >---โปรดเลือกสถานะ---</option>
+                  <?php foreach ($group as  $value): ?>
+                    <option value="<?php echo $value->customer_group_id;?> "><?php echo $value->customer_group_name; ?></option>
+                  <?php endforeach; ?>              
+            </select>
           </div>
         </div>
          <div class="form-group">
